@@ -1,0 +1,12 @@
+package appTasks;
+
+import utility.CommonUtils;
+
+public class common_Actions {
+	
+	public void getBrowser(String browserType, String applicationURL)
+	{
+		CommonUtils.BrowserCall(browserType, applicationURL);
+	}
+
+}

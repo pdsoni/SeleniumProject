@@ -1,0 +1,26 @@
+package utiliy;
+
+import java.io.InputStream;
+import java.util.Properties;
+
+
+
+public class commonUtils {
+	
+	String result = " ";
+	InputStream inputStream;
+	
+	public String getUtilsValues() {
+		Properties pro = new Properties();
+		String propFileName = "config.properties";
+		inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+		if (inputStream != null)
+		{
+			
+		}
+		return null;
+		
+	}
+	
+    
+}

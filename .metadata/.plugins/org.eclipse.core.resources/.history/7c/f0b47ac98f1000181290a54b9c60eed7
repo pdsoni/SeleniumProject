@@ -1,0 +1,18 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+
+import utiliy.commonUtils;
+
+public class googleAdvancedSearch extends commonUtils {
+	
+	public void googleSettingLink()
+	{
+		driver.findElement(By.xpath("//*[@id='abar_button_opt']")).click();
+	}
+	public void googleAdvancedSearchLink()
+	{
+		driver.findElement(By.xpath("//*[@id='lb']/div/a[4]")).click();
+	}
+
+}

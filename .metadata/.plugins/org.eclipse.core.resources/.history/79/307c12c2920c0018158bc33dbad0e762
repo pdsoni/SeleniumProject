@@ -1,0 +1,7 @@
+package Examples;
+
+@Test
+public class Example {
+		System.out.println("THis is new program");
+
+}

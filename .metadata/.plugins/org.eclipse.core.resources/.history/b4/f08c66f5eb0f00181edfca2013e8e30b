@@ -1,0 +1,23 @@
+package utiliy;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class commonUtils {
+
+	private static Properties pro = new Properties();
+	private static InputStream inputStream;
+	{
+		try	{
+			inputStream = getClass().getClassLoader().getResourceAsStream("config.properties");
+			if (inputStream != null) {
+				pro.load(inputStream);
+			} else {
+				throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
+			}
+		} catch (Exception e) {e.printStackTrace();}
+	}
+}

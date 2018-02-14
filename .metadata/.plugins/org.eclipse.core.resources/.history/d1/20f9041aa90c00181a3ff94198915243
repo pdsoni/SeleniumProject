@@ -1,0 +1,12 @@
+package testScenarios;
+
+import org.testng.annotations.Test;
+
+public class irctcTestScenarios {
+
+	@Test (description = "This test for One Way")
+	public void TC01()
+	{
+		
+	}
+}

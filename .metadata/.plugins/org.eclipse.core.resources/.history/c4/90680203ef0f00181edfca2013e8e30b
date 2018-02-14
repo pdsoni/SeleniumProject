@@ -1,0 +1,18 @@
+package testScenarios;
+
+import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import utiliy.commonUtils;
+
+public class googleSearch {
+	
+	public static void main (String[] args) throws IOException {
+		
+		commonUtils b = new commonUtils();		
+        System.out.println("Testing URL = "+ b.getProperty("appURL"));
+        
+	}
+}

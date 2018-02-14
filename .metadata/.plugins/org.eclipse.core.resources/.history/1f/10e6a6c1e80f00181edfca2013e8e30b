@@ -1,0 +1,20 @@
+package utiliy;
+
+import java.io.InputStream;
+import java.util.Properties;
+
+
+
+public class commonUtils {
+	
+	String result = " ";
+	InputStream inputStream;
+	
+	public String getUtilsValues() {
+		Properties pro = new Properties();
+		return null;
+		
+	}
+	
+    
+}

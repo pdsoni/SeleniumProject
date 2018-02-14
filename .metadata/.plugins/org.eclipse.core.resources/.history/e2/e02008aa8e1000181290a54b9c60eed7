@@ -1,0 +1,21 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+
+import utiliy.commonUtils;
+
+public class googleHomePage extends commonUtils {
+	
+	public void googleSearchBox()
+	{
+		driver.findElement(By.xpath("//*[@id='lst-ib']")).sendKeys("Technology");
+	}
+	
+	public void googleSearchButton()
+	{
+		driver.findElement(By.xpath("//*[@id='tsf']/div[2]/div[3]/center/input[1]")).click();
+	}
+	
+	
+
+}

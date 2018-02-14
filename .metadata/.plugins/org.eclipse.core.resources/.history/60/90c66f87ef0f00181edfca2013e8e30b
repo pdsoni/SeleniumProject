@@ -1,0 +1,29 @@
+package utiliy;
+
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class commonUtils {
+
+	private Properties pro = new Properties();
+	private InputStream inputStream;
+	{
+		try	{
+			inputStream = getClass().getClassLoader().getResourceAsStream("onfig.properties");
+			if (inputStream != null) {
+				pro.load(inputStream);
+				inputStream.close();
+			} else {
+				throw new FileNotFoundException("property file did not find in the classpath");
+			}
+		} catch (Exception e) 
+		{
+			System.out.println("Exception: " + e);
+		}
+	}
+	public String getProperty(String key) 
+	{
+		return pro.getProperty(key);
+	}
+}

@@ -1,0 +1,10 @@
+package testScenarios;
+
+public class irctcTestScenarios {
+
+	@Test (description = "")
+	public void TC01()
+	{
+		
+	}
+}

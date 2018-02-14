@@ -1,0 +1,13 @@
+package pageWebElements;
+
+import org.openqa.selenium.WebElement;
+import utility.CommonUtils;
+
+public class irctcAirHomePage extends CommonUtils {
+	
+	public WebElement LoginUserName()
+	{
+		 return driver.findElement(By.xpath(".//input[@id='username']")); 
+	}
+
+}

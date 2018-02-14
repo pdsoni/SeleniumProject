@@ -1,0 +1,15 @@
+package testScenarios;
+
+import org.testng.annotations.Test;
+import appTasks.common_Actions;
+
+public class irctcTestScenarios {
+	common_Actions commAction = new common_Actions();
+	
+	@Test (description = "This test for One Way")
+	public void TC01()
+	{
+		commAction.getBrowser();
+		
+	}
+}

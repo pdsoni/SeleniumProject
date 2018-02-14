@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="28339" started-at="2018-02-08T13:22:35Z" finished-at="2018-02-08T13:23:04Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="28339" started-at="2018-02-08T13:22:35Z" finished-at="2018-02-08T13:23:04Z">
+      <class name="Examples.Example">
+        <test-method status="PASS" signature="TestMethod(java.lang.String)[pri:0, instance:Examples.Example@4edc67]" name="TestMethod" duration-ms="18465" started-at="2018-02-08T18:52:35Z" finished-at="2018-02-08T18:52:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestMethod -->
+        <test-method status="PASS" signature="TestMethod2()[pri:0, instance:Examples.Example@4edc67]" name="TestMethod2" duration-ms="9795" started-at="2018-02-08T18:52:54Z" finished-at="2018-02-08T18:53:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestMethod2 -->
+      </class> <!-- Examples.Example -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

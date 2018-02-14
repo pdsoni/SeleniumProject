@@ -1,0 +1,60 @@
+package testScenarios;
+
+import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import utiliy.commonUtils;
+
+public class googleSearch {
+	
+	private void loadResource (String resource) throws IOException {
+        URL u = this.getClass().getResource(resource);
+        loadResourceByUrl(u, resource);
+    }
+
+    private void loadResourceWithContextLoader (String resource) throws IOException {
+        URL u = Thread.currentThread().getContextClassLoader().getResource(resource);
+        loadResourceByUrl(u, resource);
+    }
+
+    private void loadResourceWithSystemClassLoader (String resource) throws IOException {
+        URL u = ClassLoader.getSystemClassLoader().getResource(resource);
+        loadResourceByUrl(u, resource);
+    }
+
+    private void loadResourceByUrl (URL u, String resource) throws IOException {
+        System.out.println("-> attempting input resource: "+resource);
+        if (u != null) {
+            String path = u.getPath();
+            path = path.replaceFirst("^/(.:/)", "$1");
+            System.out.println("    absolute resource path found :\n    " + path);
+            String s = new String(Files.readAllBytes(Paths.get(path)));
+          
+            System.out.println("    file content: "+s);
+        } else {
+            System.out.println("    no resource found: " + resource);
+        }
+    }
+	
+	public static void main (String[] args) throws IOException {
+		
+		googleSearch a = new googleSearch();
+		commonUtils b = new commonUtils();
+		
+        System.out.println("\nusing this.getClass().getResource\n");
+        a.loadResource("config.properties");
+        a.loadResource("/config.properties");
+        
+        
+        System.out.println("-------------------->using current thread context loader\n");
+        a.loadResourceWithContextLoader("config.properties");
+        a.loadResourceWithContextLoader("/config.properties");
+       
+
+        System.out.println("\n using ClassLoader.getSystemClassLoader()\n");
+        a.loadResourceWithSystemClassLoader("config.properties");
+        a.loadResourceWithSystemClassLoader("/config.properties");
+	}
+}

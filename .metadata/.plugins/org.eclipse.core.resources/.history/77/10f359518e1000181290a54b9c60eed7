@@ -1,0 +1,14 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+
+import utiliy.commonUtils;
+
+public class googleHomePage extends commonUtils {
+	
+	private void googleSearchBox()
+	{
+		driver.findElement(By.xpath(""));
+	}
+
+}

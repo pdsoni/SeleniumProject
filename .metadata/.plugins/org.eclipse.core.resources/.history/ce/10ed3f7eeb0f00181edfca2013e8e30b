@@ -1,0 +1,19 @@
+package utiliy;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class commonUtils {
+	
+	InputStream inputStream;
+	Properties pro = new Properties();
+	static {
+		try	{
+				inputStream = getClass.
+				
+		} catch (Exception e) {e.printStackTrace();}
+	}
+}

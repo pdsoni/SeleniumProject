@@ -1,0 +1,4 @@
+BrowserType = FF
+appURL = https://s-myelt.ilrn-support.com
+username = rls_4.20_stg_Std8
+password = password

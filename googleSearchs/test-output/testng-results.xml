@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21983" started-at="2018-02-14T04:34:39Z" finished-at="2018-02-14T04:35:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21983" started-at="2018-02-14T04:34:39Z" finished-at="2018-02-14T04:35:01Z">
+      <class name="testScenarios.googleSearch">
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:testScenarios.googleSearch@198378d]" name="initializeTestBaseSetup" is-config="true" duration-ms="16253" started-at="2018-02-14T10:04:39Z" finished-at="2018-02-14T10:04:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="googleBasicSearch(java.lang.String)[pri:0, instance:testScenarios.googleSearch@198378d]" name="googleBasicSearch" duration-ms="2222" started-at="2018-02-14T10:04:55Z" data-provider="SearchTerm" finished-at="2018-02-14T10:04:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Technology]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleBasicSearch -->
+        <test-method status="PASS" signature="googleAdvancedBasicSearch()[pri:1, instance:testScenarios.googleSearch@198378d]" name="googleAdvancedBasicSearch" duration-ms="3448" started-at="2018-02-14T10:04:58Z" finished-at="2018-02-14T10:05:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleAdvancedBasicSearch -->
+      </class> <!-- testScenarios.googleSearch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
