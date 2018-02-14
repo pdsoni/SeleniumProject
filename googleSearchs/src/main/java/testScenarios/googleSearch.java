@@ -1,5 +1,6 @@
 package testScenarios;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -36,6 +37,12 @@ public class googleSearch {
 	@DataProvider (name = "SearchTerm")
 	public Object[] ValidSearchTerm(){
 		return new Object[]{"Technology"};
+	}
+	
+	@AfterClass
+	public void closeBroswer()
+	{
+		commonUtils.driver.close();
 	}
 	
 }

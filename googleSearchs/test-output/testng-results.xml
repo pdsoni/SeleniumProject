@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21983" started-at="2018-02-14T04:34:39Z" finished-at="2018-02-14T04:35:01Z">
+  <suite name="Default suite" duration-ms="13614" started-at="2018-02-14T06:57:26Z" finished-at="2018-02-14T06:57:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21983" started-at="2018-02-14T04:34:39Z" finished-at="2018-02-14T04:35:01Z">
+    <test name="Default test" duration-ms="13614" started-at="2018-02-14T06:57:26Z" finished-at="2018-02-14T06:57:39Z">
       <class name="testScenarios.googleSearch">
-        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:testScenarios.googleSearch@198378d]" name="initializeTestBaseSetup" is-config="true" duration-ms="16253" started-at="2018-02-14T10:04:39Z" finished-at="2018-02-14T10:04:55Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:testScenarios.googleSearch@15530b9]" name="initializeTestBaseSetup" is-config="true" duration-ms="8183" started-at="2018-02-14T12:27:26Z" finished-at="2018-02-14T12:27:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="googleBasicSearch(java.lang.String)[pri:0, instance:testScenarios.googleSearch@198378d]" name="googleBasicSearch" duration-ms="2222" started-at="2018-02-14T10:04:55Z" data-provider="SearchTerm" finished-at="2018-02-14T10:04:58Z">
+        <test-method status="PASS" signature="googleBasicSearch(java.lang.String)[pri:0, instance:testScenarios.googleSearch@15530b9]" name="googleBasicSearch" duration-ms="2930" started-at="2018-02-14T12:27:34Z" data-provider="SearchTerm" finished-at="2018-02-14T12:27:37Z">
           <params>
             <param index="0">
               <value>
@@ -22,10 +22,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleBasicSearch -->
-        <test-method status="PASS" signature="googleAdvancedBasicSearch()[pri:1, instance:testScenarios.googleSearch@198378d]" name="googleAdvancedBasicSearch" duration-ms="3448" started-at="2018-02-14T10:04:58Z" finished-at="2018-02-14T10:05:01Z">
+        <test-method status="PASS" signature="googleAdvancedBasicSearch()[pri:1, instance:testScenarios.googleSearch@15530b9]" name="googleAdvancedBasicSearch" duration-ms="2354" started-at="2018-02-14T12:27:37Z" finished-at="2018-02-14T12:27:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleAdvancedBasicSearch -->
+        <test-method status="PASS" signature="closeBroswer()[pri:0, instance:testScenarios.googleSearch@15530b9]" name="closeBroswer" is-config="true" duration-ms="117" started-at="2018-02-14T12:27:39Z" finished-at="2018-02-14T12:27:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBroswer -->
       </class> <!-- testScenarios.googleSearch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

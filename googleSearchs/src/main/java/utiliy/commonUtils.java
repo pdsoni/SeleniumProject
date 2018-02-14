@@ -49,21 +49,24 @@ public class commonUtils {
 	{
 		if (BrowserType.equalsIgnoreCase("IE"))
 		{
-			System.setProperty("webdriver.ie.driver", "C://Selenium//Drivers//IEDriverServer.exe");
+			//System.setProperty("webdriver.ie.driver", "C://Selenium//Drivers//IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", Thread.currentThread().getContextClassLoader().getResource("IEDriverServer.exe").getFile());
 			driver = new InternetExplorerDriver();
 			driver.manage().window().maximize();
 			driver.get(env);
 			return driver;	 
 		}else if(BrowserType.equalsIgnoreCase("FF"))
 		{
-			System.setProperty("webdriver.gecko.driver", "C://Selenium//Drivers//geckodriver.exe");
+			//System.setProperty("webdriver.gecko.driver", "C://Selenium//Drivers//geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", Thread.currentThread().getContextClassLoader().getResource("geckodriver.exe").getFile());
 			driver = new FirefoxDriver();
 			//driver.manage().window().maximize();
 			driver.get(env);
 			return driver;
 		} else
 		{
-			System.setProperty("webdriver.chrome.driver", "C://Selenium//Drivers//chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", "C://Selenium//Drivers//chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", Thread.currentThread().getContextClassLoader().getResource("chromedriver.exe").getFile());
 			driver = new ChromeDriver();
 			//driver.manage().window().maximize();
 			driver.get(env);
