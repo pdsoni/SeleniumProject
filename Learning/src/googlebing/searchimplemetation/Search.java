@@ -1,0 +1,32 @@
+package googlebing.searchimplemetation;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public interface Search {
+	
+	/**
+     * performs a search for keyword and returns a list of result maps
+     * containing the following:
+     *  {"title": [Result Title], "pageLink": [Result Page URL]}
+     */
+	public List<HashMap<String, String>> searchFor(String keyword);
+
+	/**
+     * performs a definition search query for dictionary meaning of
+     * phrase. method returns a map of definition properties for
+     * example
+     * containing the following:
+     *  {"definition": [term/phrase definition], "pronunciation": [Pronunciation of the word]}
+     */
+	public Map<String, String> definePhrase(String phrase);
+
+	/**
+     * performs an image search for keyword and returns a list of first
+     * 10 result image files
+     */
+	public List<File> searchImagesFor(String keyword);
+	
+}

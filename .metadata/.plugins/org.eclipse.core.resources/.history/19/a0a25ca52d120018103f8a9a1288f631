@@ -1,0 +1,25 @@
+package scenarios.test;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utilities.commonUtilities;
+import googlebing.searchimplemetation.Google;
+
+public class TestScenarios extends commonUtilities{
+	
+	Google google = new Google();
+	
+	@BeforeMethod()
+	public void initializeTestBaseSetup()
+	{
+		commonUtilities.BrowserCall(commonUtilities.getProperty("browserType"), commonUtilities.getProperty("appURL"));
+	}
+	
+	@Test
+	public void googleSearch() {
+		
+		System.out.println("Sum is = " + google.sum(20, 30));
+	}
+
+}

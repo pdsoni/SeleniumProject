@@ -1,0 +1,31 @@
+package scenarios.test;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import utilities.commonUtilities;
+import googlebing.searchimplemetation.Google;
+
+public class TestScenarios extends commonUtilities{
+	
+	Google google = new Google();
+	
+	@BeforeMethod()
+	public void initializeTestBaseSetup()
+	{
+		commonUtilities.BrowserCall(commonUtilities.getProperty("browserType"), commonUtilities.getProperty("appURL"));
+	}
+	
+	@Test
+	public void googleSearch() {
+		List<HashMap<String, String>> searchResults = new ArrayList<HashMap<String, String>>();
+		searchResults = google.searchFor(commonUtilities.getProperty("searchTerm"));
+		System.out.println(Collections.singletonList(searchResults));
+	}
+
+}

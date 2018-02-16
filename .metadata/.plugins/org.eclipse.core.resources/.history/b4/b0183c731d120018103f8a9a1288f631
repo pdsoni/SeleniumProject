@@ -1,0 +1,17 @@
+package scenarios.test;
+
+import org.testng.annotations.Test;
+
+import googlebing.searchimplemetation.Google;
+
+public class TestScenarios {
+	
+	Google google = new Google();
+	
+	@Test
+	public void googleSearch() {
+		
+		System.out.println("Sum is = " + google.sum(20, 30));
+	}
+
+}

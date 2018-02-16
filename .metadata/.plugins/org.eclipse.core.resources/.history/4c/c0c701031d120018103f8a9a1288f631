@@ -1,0 +1,12 @@
+package scenarios.test;
+
+import googlebing.searchimplemetation.Google;
+
+public class TestScenarios {
+	
+	public static void main (String arg[]){
+		Google google = new Google();
+		System.out.println("Sum is = " + google.sum(20, 30));
+	}
+
+}

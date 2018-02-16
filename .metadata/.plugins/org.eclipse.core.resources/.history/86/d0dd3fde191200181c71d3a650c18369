@@ -1,0 +1,5 @@
+package googlebing.searchimplemetation;
+
+public interface Search {
+
+}
