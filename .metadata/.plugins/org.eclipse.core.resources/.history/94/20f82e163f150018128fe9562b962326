@@ -1,0 +1,18 @@
+package scenarios.test;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+
+import utilities.utils;
+
+public class GoogleTest {
+
+	public WebDriver driver;
+	utils ut = new utils();
+	
+	@BeforeMethod()
+	public void initializeTestBaseSetup()
+	{
+		driver = ut.setDriver(ut.getProperty(""), ut.getProperty(""));
+	}
+}

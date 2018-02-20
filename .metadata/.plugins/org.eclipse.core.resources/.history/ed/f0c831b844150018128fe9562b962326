@@ -1,0 +1,58 @@
+package searches;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import implementation.search.Search;
+
+public class BingSearch implements Search{
+	
+	public WebDriver driver;
+	
+	@FindBy(css="input[name='q']")
+	WebElement googleSearchBox;
+	
+	@FindBy(css="input[name='go']")
+	WebElement googleSearchButton;
+	
+	@FindBy(css="h3:first-child a[href^='http']")
+	List<WebElement> results;
+	
+	@FindBy(css="div[data-dobid='dfn']>span")
+	WebElement phraseDef;
+	
+	@FindBy(css="span.lr_dct_ph>span")
+	WebElement phrasePronunciation;
+	
+	@FindBy(css="#hdtb-msb-vis > div:nth-child(3) > a")
+	WebElement imageLink;
+	
+	@FindBy(css="a[jsname='hSRGPd']")
+	List<WebElement> imageResults;
+	
+	@FindBy(css=".rg_ic.rg_i")
+	List<WebElement> imageLocation;
+	
+
+	public List<HashMap<String, String>> searchFor(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Map<String, String> definePhrase(String phrase) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<File> searchImagesFor(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

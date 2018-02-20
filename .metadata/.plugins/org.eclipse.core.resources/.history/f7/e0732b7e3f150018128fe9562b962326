@@ -1,0 +1,37 @@
+package scenarios.test;
+
+import googlebing.searchimplemetation.Google;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeMethod;
+
+import searches.GoogleSearch;
+import utilities.commonUtilities;
+import utilities.utils;
+
+public class GoogleTest {
+
+	public WebDriver driver;
+	utils ut = new utils();
+	GoogleSearch goooglObj;
+	
+	@BeforeMethod()
+	public void initializeTestBaseSetup()
+	{
+		driver = ut.setDriver(ut.getProperty("BrowserType"), ut.getProperty("appURL"));
+	}
+	
+	@Test()
+	public void googleSearch() {
+		PageFactory.initElements(driver, goooglObj.class);
+		List<HashMap<String, String>> searchResults = new ArrayList<HashMap<String, String>>();
+		searchResults = googleObj.searchFor(commonUtilities.getProperty("searchTerm"));
+		System.out.println(Collections.singletonList(searchResults));
+	}
+}

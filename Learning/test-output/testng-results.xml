@@ -2,19 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16296" started-at="2018-02-16T08:36:49Z" finished-at="2018-02-16T08:37:05Z">
+  <suite name="Suite" duration-ms="22220" started-at="2018-02-16T12:04:02Z" finished-at="2018-02-16T12:04:24Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16296" started-at="2018-02-16T08:36:49Z" finished-at="2018-02-16T08:37:05Z">
+    <test name="Test" duration-ms="22220" started-at="2018-02-16T12:04:02Z" finished-at="2018-02-16T12:04:24Z">
       <class name="scenarios.test.TestScenarios">
-        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.TestScenarios@78c730]" name="initializeTestBaseSetup" is-config="true" duration-ms="10200" started-at="2018-02-16T14:06:49Z" finished-at="2018-02-16T14:06:59Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.TestScenarios@167c1fc]" name="initializeTestBaseSetup" is-config="true" duration-ms="16175" started-at="2018-02-16T17:34:02Z" finished-at="2018-02-16T17:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="seearchImages()[pri:2, instance:scenarios.test.TestScenarios@78c730]" name="seearchImages" duration-ms="6064" started-at="2018-02-16T14:06:59Z" finished-at="2018-02-16T14:07:05Z">
+        <test-method status="PASS" signature="seearchImages()[pri:2, instance:scenarios.test.TestScenarios@167c1fc]" name="seearchImages" duration-ms="5852" started-at="2018-02-16T17:34:18Z" finished-at="2018-02-16T17:34:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seearchImages -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.TestScenarios@167c1fc]" name="closeBrowser" is-config="true" duration-ms="165" started-at="2018-02-16T17:34:24Z" finished-at="2018-02-16T17:34:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- scenarios.test.TestScenarios -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

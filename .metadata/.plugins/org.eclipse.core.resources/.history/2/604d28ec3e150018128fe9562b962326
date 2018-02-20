@@ -1,0 +1,14 @@
+package scenarios.test;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+
+public class GoogleTest {
+
+	public WebDriver driver;
+	@BeforeMethod()
+	public void initializeTestBaseSetup()
+	{
+	
+	}
+}

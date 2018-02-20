@@ -1,0 +1,5 @@
+package google.search;
+
+public class Search {
+
+}

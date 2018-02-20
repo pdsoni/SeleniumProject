@@ -1,0 +1,3 @@
+BrowserType = FF
+appURL = https://www.google.co.in
+SearchTerm = Automation
