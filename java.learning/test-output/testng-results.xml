@@ -1,21 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="12039" started-at="2018-02-19T13:32:08Z" finished-at="2018-02-19T13:32:20Z">
+  <suite name="Suite" duration-ms="64871" started-at="2018-02-20T11:16:17Z" finished-at="2018-02-20T11:17:22Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="12039" started-at="2018-02-19T13:32:08Z" finished-at="2018-02-19T13:32:20Z">
+    <test name="Google Scnearios Test" duration-ms="36446" started-at="2018-02-20T11:16:17Z" finished-at="2018-02-20T11:16:53Z">
       <class name="scenarios.test.GoogleTest">
-        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.GoogleTest@15530b9]" name="initializeTestBaseSetup" is-config="true" duration-ms="8411" started-at="2018-02-19T19:02:08Z" finished-at="2018-02-19T19:02:17Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.GoogleTest@1057a39]" name="initializeTestBaseSetup" is-config="true" duration-ms="10983" started-at="2018-02-20T16:46:17Z" finished-at="2018-02-20T16:46:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="seearchImages()[pri:2, instance:scenarios.test.GoogleTest@15530b9]" name="seearchImages" duration-ms="3608" started-at="2018-02-19T19:02:17Z" finished-at="2018-02-19T19:02:20Z">
+        <test-method status="PASS" signature="googleSearch()[pri:1, instance:scenarios.test.GoogleTest@1057a39]" name="googleSearch" duration-ms="2883" started-at="2018-02-20T16:46:28Z" description="Basic Search" finished-at="2018-02-20T16:46:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleSearch -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.GoogleTest@1057a39]" name="closeBrowser" is-config="true" duration-ms="113" started-at="2018-02-20T16:46:31Z" finished-at="2018-02-20T16:46:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.GoogleTest@1057a39]" name="initializeTestBaseSetup" is-config="true" duration-ms="7772" started-at="2018-02-20T16:46:31Z" finished-at="2018-02-20T16:46:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="definePhrase()[pri:1, instance:scenarios.test.GoogleTest@1057a39]" name="definePhrase" duration-ms="1380" started-at="2018-02-20T16:46:39Z" description="Phrase Search" finished-at="2018-02-20T16:46:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- definePhrase -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.GoogleTest@1057a39]" name="closeBrowser" is-config="true" duration-ms="153" started-at="2018-02-20T16:46:40Z" finished-at="2018-02-20T16:46:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.GoogleTest@1057a39]" name="initializeTestBaseSetup" is-config="true" duration-ms="8374" started-at="2018-02-20T16:46:40Z" finished-at="2018-02-20T16:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="seearchImages()[pri:2, instance:scenarios.test.GoogleTest@1057a39]" name="seearchImages" duration-ms="4602" started-at="2018-02-20T16:46:49Z" description="Images Search" finished-at="2018-02-20T16:46:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seearchImages -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.GoogleTest@1057a39]" name="closeBrowser" is-config="true" duration-ms="156" started-at="2018-02-20T16:46:53Z" finished-at="2018-02-20T16:46:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- scenarios.test.GoogleTest -->
-    </test> <!-- Test -->
+    </test> <!-- Google Scnearios Test -->
+    <test name="Bing Scnearios Test" duration-ms="28378" started-at="2018-02-20T11:16:53Z" finished-at="2018-02-20T11:17:22Z">
+      <class name="scenarios.test.BingTest">
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.BingTest@19c0f4a]" name="initializeTestBaseSetup" is-config="true" duration-ms="7792" started-at="2018-02-20T16:46:53Z" finished-at="2018-02-20T16:47:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="BingSearch()[pri:0, instance:scenarios.test.BingTest@19c0f4a]" name="BingSearch" duration-ms="1646" started-at="2018-02-20T16:47:01Z" description="Basic Search" finished-at="2018-02-20T16:47:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BingSearch -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.BingTest@19c0f4a]" name="closeBrowser" is-config="true" duration-ms="152" started-at="2018-02-20T16:47:03Z" finished-at="2018-02-20T16:47:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.BingTest@19c0f4a]" name="initializeTestBaseSetup" is-config="true" duration-ms="6804" started-at="2018-02-20T16:47:03Z" finished-at="2018-02-20T16:47:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="definePhrase()[pri:1, instance:scenarios.test.BingTest@19c0f4a]" name="definePhrase" duration-ms="986" started-at="2018-02-20T16:47:10Z" description="Phrase Search" finished-at="2018-02-20T16:47:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- definePhrase -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.BingTest@19c0f4a]" name="closeBrowser" is-config="true" duration-ms="153" started-at="2018-02-20T16:47:11Z" finished-at="2018-02-20T16:47:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.BingTest@19c0f4a]" name="initializeTestBaseSetup" is-config="true" duration-ms="6765" started-at="2018-02-20T16:47:11Z" finished-at="2018-02-20T16:47:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="seearchImages()[pri:2, instance:scenarios.test.BingTest@19c0f4a]" name="seearchImages" duration-ms="3759" started-at="2018-02-20T16:47:18Z" description="Images Search" finished-at="2018-02-20T16:47:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seearchImages -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.BingTest@19c0f4a]" name="closeBrowser" is-config="true" duration-ms="320" started-at="2018-02-20T16:47:21Z" finished-at="2018-02-20T16:47:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- scenarios.test.BingTest -->
+    </test> <!-- Bing Scnearios Test -->
   </suite> <!-- Suite -->
 </testng-results>

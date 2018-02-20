@@ -1,0 +1,21 @@
+package Examples;
+
+import java.net.URL;
+import java.net.URLConnection;
+
+public class GoogleImageDownload {
+
+	public static void main(String[] args) {
+		try{
+			
+			 URL url = new URL("https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=sen+triplets");
+			 URLConnection connection = url.openConnection();
+			 String line;
+			 StringBuilder builder = new StringBuilder();
+			
+		}catch(Exception e){
+			
+		}
+	}
+
+}

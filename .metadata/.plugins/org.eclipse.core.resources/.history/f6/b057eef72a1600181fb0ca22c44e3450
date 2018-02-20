@@ -1,0 +1,102 @@
+package searches;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import implementation.search.Search;
+
+public class GoogleSearch implements Search{
+	
+public WebDriver driver;
+	
+	@FindBy(css="input[name='q']")
+	WebElement googleSearchBox;
+	
+	@FindBy(css="input[name='btnK']")
+	WebElement googleSearchButton;
+	
+	@FindBy(css="h3:first-child a[href^='http']")
+	List<WebElement> results;
+	
+	@FindBy(css="div[data-dobid='dfn']>span")
+	WebElement phraseDef;
+	
+	@FindBy(css="span.lr_dct_ph>span")
+	WebElement phrasePronunciation;
+	
+	@FindBy(css="#hdtb-msb-vis > div:nth-child(3) > a")
+	WebElement imageLink;
+	
+	@FindBy(css="img[data-src*='http']")
+	List<WebElement> imageResults;
+	
+	@FindBy(css=".rg_ic.rg_i")
+	List<WebElement> imageLocation;
+
+	/**
+	 * This method is for Google basic search
+	 * @param: Search String
+	 * @return: Returning list of map which containing following:
+	 * {{"title", "Result Title"}, {"pageLink", "Result Page URL"}}
+	 */
+	
+	public List<HashMap<String, String>> searchFor(String keyword) {
+		List<HashMap<String, String>> searchResults = new ArrayList<HashMap<String, String>>();
+		googleSearchBox.sendKeys(keyword);
+		googleSearchButton.click();	
+		for (WebElement result: results){
+			HashMap<String, String> attributes = new HashMap<String, String>();
+			attributes.put("linkTitle",result.getText());
+			attributes.put("pageLink",result.getAttribute("href"));
+			searchResults.add(attributes);
+		}
+		return searchResults;
+	}
+	
+	/**
+	 * This method is for perform a definition search query for dictionary meaning of phrase
+	 * @param: Search String
+	 * @return: Returning map which containing following:
+	 * {"definition": [term/phrase definition], "pronunciation": [Pronunciation of the word]}
+	 */
+	
+	public HashMap<String, String> definePhrase(String phrase) {
+		HashMap<String, String> searchPhrase = new HashMap<String, String>();
+		googleSearchBox.sendKeys(phrase);
+		googleSearchButton.click();
+		searchPhrase.put("phraseDefinition", phraseDef.getText());
+		searchPhrase.put("phrasePronunciation", phrasePronunciation.getAttribute("/")+phrasePronunciation.getText());
+		return searchPhrase;
+	}
+
+	/**
+	 * This method is for perform an image search for keyword
+	 * @param: Search String
+	 * @return: Returning list of image files
+	 *
+	 */
+	public List<File> searchImagesFor(String SearchTerm) {
+		List<File> fileList = new ArrayList<File>();
+		googleSearchBox.sendKeys(SearchTerm);
+		googleSearchButton.click();
+		imageLink.click();
+		
+		int i = 1;
+		for (WebElement img: imageResults)
+		{
+			//System.out.println("Image link =" + img.getAttribute("src"));
+			File file = new File(img.getAttribute("src"));
+			fileList.add(file);
+			if (i == 10) 
+				break;
+			i++; 
+		}
+		return fileList;
+	}
+}

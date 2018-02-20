@@ -5,10 +5,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import searches.GoogleSearch;
 import utilities.utils;
 
@@ -23,7 +26,7 @@ public class GoogleTest {
 		driver = ut.setDriver(ut.getProperty("BrowserType"), ut.getProperty("appURL"));
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 1, description ="Basic Search")
 	public void googleSearch() {
 		GoogleSearch goooglObj = PageFactory.initElements(driver, GoogleSearch.class);
 		List<HashMap<String, String>> searchResults = new ArrayList<HashMap<String, String>>();
@@ -31,7 +34,7 @@ public class GoogleTest {
 		searchResults = goooglObj.searchFor(ut.getProperty("SearchTerm"));
 		System.out.println(Collections.singletonList(searchResults));
 	}
-	@Test (priority = 1)
+	@Test (priority = 1, description ="Phrase Search")
 	public void definePhrase() {
 		GoogleSearch goooglObj = PageFactory.initElements(driver, GoogleSearch.class);
 		HashMap<String, String> searchResults = new HashMap<String, String>();
@@ -39,7 +42,7 @@ public class GoogleTest {
 		System.out.println(Collections.singletonList(searchResults));
 	}
 	
-	@Test (priority = 2)
+	@Test (priority = 2, description ="Images Search")
 	public void seearchImages() {
 		GoogleSearch goooglObj = PageFactory.initElements(driver, GoogleSearch.class);
 		List<File> searchResults = new ArrayList<File>();
@@ -47,9 +50,9 @@ public class GoogleTest {
 		System.out.println("=====> "+Collections.singletonList(searchResults));
 	}
 	
-	/*@AfterMethod
+	@AfterMethod
 	public void closeBrowser()
 	{
 		driver.close();
-	}*/
+	}
 }

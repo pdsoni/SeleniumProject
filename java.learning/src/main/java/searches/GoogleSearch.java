@@ -1,11 +1,6 @@
 package searches;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +8,7 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import implementation.search.Search;
 
 public class GoogleSearch implements Search{
@@ -43,6 +39,13 @@ public WebDriver driver;
 	@FindBy(css=".rg_ic.rg_i")
 	List<WebElement> imageLocation;
 
+	/**
+	 * This method is for Google basic search
+	 * @param: Search String
+	 * @return: Returning list of map which containing following:
+	 * {{"title", "Result Title"}, {"pageLink", "Result Page URL"}}
+	 */
+	
 	public List<HashMap<String, String>> searchFor(String keyword) {
 		List<HashMap<String, String>> searchResults = new ArrayList<HashMap<String, String>>();
 		googleSearchBox.sendKeys(keyword);
@@ -55,62 +58,45 @@ public WebDriver driver;
 		}
 		return searchResults;
 	}
-
+	
+	/**
+	 * This method is for perform a definition search query for dictionary meaning of phrase
+	 * @param: Search String
+	 * @return: Returning map which containing following:
+	 * {"definition": [term/phrase definition], "pronunciation": [Pronunciation of the word]}
+	 */
+	
 	public HashMap<String, String> definePhrase(String phrase) {
 		HashMap<String, String> searchPhrase = new HashMap<String, String>();
 		googleSearchBox.sendKeys(phrase);
 		googleSearchButton.click();
 		searchPhrase.put("phraseDefinition", phraseDef.getText());
-		searchPhrase.put("phrasePronunciation", phrasePronunciation.getAttribute(""));
+		searchPhrase.put("phrasePronunciation", phrasePronunciation.getText());
 		return searchPhrase;
 	}
 
+	/**
+	 * This method is for perform an image search for keyword
+	 * @param: Search String
+	 * @return: Returning list of image files
+	 *
+	 */
 	public List<File> searchImagesFor(String SearchTerm) {
 		List<File> fileList = new ArrayList<File>();
 		googleSearchBox.sendKeys(SearchTerm);
 		googleSearchButton.click();
-		//try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
 		imageLink.click();
-		
-		File folder = new File("C:/Program Files/Notepad++/plugins/APIs");
-		File[] listofFIles = folder.listFiles();
-		
-		for (File file : listofFIles) {
-		    if (file.isFile()) {
-		        System.out.println(file.getName());
-		        fileList.add(file);
-		    }
-		}
 		
 		int i = 1;
 		for (WebElement img: imageResults)
 		{
-			System.out.println("Image link =" + img.getAttribute("src"));
-			try {
-				saveImage(img.getAttribute("src"));
-			} catch (IOException e) {e.printStackTrace();}
-			if (i == 2) 
-			break;
+			//System.out.println("Image link =" + img.getAttribute("src"));
+			File file = new File(img.getAttribute("src"));
+			fileList.add(file);
+			if (i == 10) 
+				break;
 			i++; 
 		}
 		return fileList;
 	}
-	
-	public void saveImage(String imageURL) throws IOException
-	{
-		URL url = new URL(imageURL);
-		InputStream is = url.openStream();
-		OutputStream os = new FileOutputStream("C:/Users/pradeep_kumar/Downloads/");
-		byte[] b = new byte[2048];
-		int length;
-
-		while ((length = is.read(b)) != -1) {
-			os.write(b, 0, length);
-		}
-
-		is.close();
-		os.close();
-	}
-	
-
 }

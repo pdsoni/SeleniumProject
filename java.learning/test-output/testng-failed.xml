@@ -5,8 +5,9 @@
     <classes>
       <class name="scenarios.test.BingTest">
         <methods>
+          <include name="seearchImages"/>
           <include name="initializeTestBaseSetup"/>
-          <include name="googleSearch"/>
+          <include name="definePhrase"/>
         </methods>
       </class> <!-- scenarios.test.BingTest -->
     </classes>

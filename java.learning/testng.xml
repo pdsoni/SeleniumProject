@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Google Scnearios Test">
     <classes>
       <class name="scenarios.test.GoogleTest">
       	<methods>
+      		<include name="googleSearch"></include>
+      		<include name="definePhrase"></include>
+      		<include name="seearchImages"></include>
+      	</methods>
+      </class>	
+    </classes>
+   </test> <!-- Test -->
+   <test thread-count="5" name="Bing Scnearios Test">
+    <classes>
+      <class name="scenarios.test.BingTest">
+      	<methods>
+      		<include name="BingSearch"></include>
+      		<include name="definePhrase"></include>
       		<include name="seearchImages"></include>
       	</methods>
       </class>	

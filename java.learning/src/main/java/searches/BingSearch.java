@@ -27,18 +27,24 @@ public class BingSearch implements Search{
 	@FindBy(css="div.dc_mn")
 	WebElement phraseDef;
 	
-	@FindBy(css="span.lr_dct_ph>span")
+	@FindBy(css="div.dc_prn>div>span:nth-child(1)")
 	WebElement phrasePronunciation;
 	
-	@FindBy(css="#hdtb-msb-vis > div:nth-child(3) > a")
+	@FindBy(css="a[h='ID=SERP,5017.1']")
 	WebElement imageLink;
 	
-	@FindBy(css="a[jsname='hSRGPd']")
+	@FindBy(css="div.imgpt>a>div>img")
 	List<WebElement> imageResults;
 	
 	@FindBy(css=".rg_ic.rg_i")
 	List<WebElement> imageLocation;
 	
+	/**
+	 * This method is for Bing basic search
+	 * @param: Search String
+	 * @return: Returning list of map which containing following:
+	 * {{"title", "Result Title"}, {"pageLink", "Result Page URL"}}
+	 */
 
 	public List<HashMap<String, String>> searchFor(String keyword) {
 		List<HashMap<String, String>> searchResults = new ArrayList<HashMap<String, String>>();
@@ -53,6 +59,13 @@ public class BingSearch implements Search{
 		return searchResults;
 	}
 
+	/**
+	 * This method is for perform a definition search query for dictionary meaning of phrase
+	 * @param: Search String
+	 * @return: Returning map which containing following:
+	 * {"definition": [term/phrase definition], "pronunciation": [Pronunciation of the word]}
+	 */
+	
 	public HashMap<String, String> definePhrase(String phrase) {
 		HashMap<String, String> searchPhrase = new HashMap<String, String>();
 		bingSearchBox.sendKeys(phrase);
@@ -62,26 +75,29 @@ public class BingSearch implements Search{
 		return searchPhrase;
 	}
 
+	/**
+	 * This method is for perform an image search for keyword
+	 * @param: Search String
+	 * @return: Returning list of image files
+	 *
+	 */
+	
 	public List<File> searchImagesFor(String SearchTerm) {
+		List<File> fileList = new ArrayList<File>();
 		bingSearchBox.sendKeys(SearchTerm);
 		bingSearchIcon.click();
-		//try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
 		imageLink.click();
 		int i = 1;
 		for (WebElement img: imageResults)
 		{
 			System.out.println("Image link =" + img.getAttribute("href"));
-			if (i == 10) 
+			File file = new File(img.getAttribute("src"));
+			fileList.add(file);
+				if (i == 10) 
 			break;
 			i++; 
 		}
-		File directory = new File("C:/Users/pradeep_kumar/workspace/Learning/bin");
-        //get all the files from a directory
-        File[] fList = directory.listFiles();
-        for (File file : fList){
-            System.out.println(file.getName());
-        }
-		return null;
+		return fileList;
 	}
 
 }
