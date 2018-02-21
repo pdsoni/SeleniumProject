@@ -1,0 +1,13 @@
+package Examples;
+
+import org.json.JSONObject;
+
+public class JsonExample {
+
+	public static void main(String[] args) {
+		
+		JSONObject jobj = new JSONObject();
+
+	}
+
+}

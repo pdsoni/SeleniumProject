@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="scenarios.test.BingTest">
+      <class name="scenarios.test.GoogleTest">
         <methods>
           <include name="seearchImages"/>
           <include name="initializeTestBaseSetup"/>
-          <include name="definePhrase"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- scenarios.test.BingTest -->
+      </class> <!-- scenarios.test.GoogleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

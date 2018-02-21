@@ -1,0 +1,19 @@
+package Examples;
+
+import org.json.JSONObject;
+
+public class JsonExample {
+
+	public static void main(String[] args) {
+		JsonWrite();
+		
+
+	}
+	
+	private static void JsonWrite()
+	{
+		JSONObject obj = new JSONObject();
+		
+	}
+
+}

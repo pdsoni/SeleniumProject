@@ -1,0 +1,79 @@
+package Examples;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.PrintWriter;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONStringer;
+
+import com.google.gson.JsonParseException;
+
+public class JsonExample {
+
+	public static void main(String[] args) {
+		JsonWrite();
+		JSONReader();
+
+	}
+	
+	private static void JsonWrite()
+	{
+		//Creating JSON Object
+		JSONObject obj = new JSONObject();
+		
+		//Putting data to JSONOBject
+		
+		obj.put("firstName", "Pradeep");
+		obj.put("lastName", "Soni");
+		obj.put("age", "35");
+		
+		// for address data, first create LinkedHashMap
+		Map<String, String> mAdd = new LinkedHashMap<String, String>(5);
+		mAdd.put("street", "393 West Side Driver");
+		mAdd.put("apratment", "203");
+		mAdd.put("city", "Gaithersburg");	
+		mAdd.put("state", "MD");
+		mAdd.put("pin", "20878");
+		
+		// putting address to JSONObject
+		obj.put("address", mAdd);
+		
+		// for phone numbers, first create JSONArray 
+        JSONArray ja = new JSONArray();
+		
+        mAdd = new LinkedHashMap<String, String>(2);
+        mAdd.put("type", "home");
+        mAdd.put("number", "301 520-2980");
+        
+        // adding map to list
+        ja.put(mAdd);
+        
+        mAdd = new LinkedHashMap<String, String>(2);
+        mAdd.put("type", "fax");
+        mAdd.put("number", "301 520-2080");
+        
+        // adding map to list
+        ja.put(mAdd);
+        
+        // putting phoneNumbers to JSONObject
+        obj.put("phone", ja);
+        // writing JSON to file:"JSONExample.json" in cwd
+        try {
+			PrintWriter pw = new PrintWriter("JSONExample.json");
+			pw.write(obj.toString());
+			 
+			pw.flush();
+			pw.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+}

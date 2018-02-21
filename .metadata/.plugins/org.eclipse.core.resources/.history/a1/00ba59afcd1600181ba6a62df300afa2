@@ -1,0 +1,41 @@
+package Examples;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.json.JSONObject;
+
+public class JsonExample {
+
+	public static void main(String[] args) {
+		JsonWrite();
+		
+
+	}
+	
+	private static void JsonWrite()
+	{
+		//Creating JSON Object
+		JSONObject obj = new JSONObject();
+		
+		//Putting data to JSONOBject
+		
+		obj.put("firstName", "Pradeep");
+		obj.put("lastName", "Soni");
+		obj.put("age", "35");
+		
+		// for address data, first create LinkedHashMap
+		Map<String, Comparable> mAdd = new LinkedHashMap<String, Comparable>(5);
+		mAdd.put("street", "393 West Side Driver");
+		mAdd.put("apratment", 203);
+		mAdd.put("city", "Gaithersburg");	
+		mAdd.put("state", "MD");
+		mAdd.put("pin", 20878);
+		
+		// putting address to JSONObject
+		obj.put("address", mAdd);
+		
+		
+	}
+
+}

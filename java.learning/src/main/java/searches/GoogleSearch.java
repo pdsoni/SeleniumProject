@@ -1,6 +1,11 @@
 package searches;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -93,10 +98,32 @@ public WebDriver driver;
 			//System.out.println("Image link =" + img.getAttribute("src"));
 			File file = new File(img.getAttribute("src"));
 			fileList.add(file);
+			try {
+				fileList.add(saveImage(img.getAttribute("src")));
+			} catch (IOException e) {e.printStackTrace();}
 			if (i == 10) 
 				break;
 			i++; 
 		}
 		return fileList;
 	}
+	
+	public static File saveImage(String imageUrl) throws IOException {
+		File file = null;
+	    URL url = new URL(imageUrl);
+	    InputStream is = url.openStream();
+	    OutputStream os = new FileOutputStream(file);
+
+	    byte[] b = new byte[2048];
+	    int length;
+
+	    while ((length = is.read(b)) != -1) {
+	        os.write(b, 0, length);
+	    }
+
+	    is.close();
+	    os.close();
+	    return file;
+	}
+	
 }
