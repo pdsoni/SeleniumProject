@@ -1,0 +1,41 @@
+package scenarios;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import googleTest.GoogleSearch;
+
+import utilities.Utils;
+
+
+public class googleSearch {
+
+	public WebDriver driver;
+	Utils ut = new Utils();
+		
+	@BeforeMethod()
+	public void initializeTestBaseSetup()
+	{
+		driver = ut.setDriver(ut.getProperty("BrowserType"), ut.getProperty("appURL"));
+	}
+	
+	@Test(priority = 1, description ="Basic Search")
+	public void googleSearch() {
+		GoogleSearch goooglObj = PageFactory.initElements(driver, GoogleSearch.class);
+		goooglObj.googleSearch();
+		
+	}
+	
+	@AfterMethod
+	public void closeBrowser()
+	{
+		driver.close();
+	}
+}

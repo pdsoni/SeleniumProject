@@ -1,0 +1,4 @@
+BrowserType = FF
+appURL = https://www.google.co.in
+appBingURL = https://www.bing.com/
+SearchTerm = Technology

@@ -1,0 +1,25 @@
+package googleTest;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class GoogleSearch {
+	
+	public WebDriver driver;
+
+	@FindBy(css="input[name='q']")
+	WebElement googleSearchBox;
+	
+	@FindBy(css="input[name='btnK']")
+	WebElement googleSearchButton;
+	
+	public String BasicSearch()
+	{
+		googleSearchBox.sendKeys("Techno World");
+		googleSearchButton.click();
+		String pageTitle = driver.getTitle();
+		return pageTitle;
+	}
+	
+}

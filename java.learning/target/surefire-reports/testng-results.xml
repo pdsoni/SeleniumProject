@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="61422" started-at="2018-02-21T09:57:58Z" finished-at="2018-02-21T09:58:59Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="61422" started-at="2018-02-21T09:57:58Z" finished-at="2018-02-21T09:58:59Z">
+      <class name="scenarios.test.BingTest">
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.BingTest@108b2d7]" name="initializeTestBaseSetup" is-config="true" duration-ms="7735" started-at="2018-02-21T15:27:58Z" finished-at="2018-02-21T15:28:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="BingSearch()[pri:0, instance:scenarios.test.BingTest@108b2d7]" name="BingSearch" duration-ms="1538" started-at="2018-02-21T15:28:06Z" description="Basic Search" finished-at="2018-02-21T15:28:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BingSearch -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.BingTest@108b2d7]" name="closeBrowser" is-config="true" duration-ms="163" started-at="2018-02-21T15:28:07Z" finished-at="2018-02-21T15:28:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.BingTest@108b2d7]" name="initializeTestBaseSetup" is-config="true" duration-ms="6710" started-at="2018-02-21T15:28:07Z" finished-at="2018-02-21T15:28:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="definePhrase()[pri:1, instance:scenarios.test.BingTest@108b2d7]" name="definePhrase" duration-ms="1105" started-at="2018-02-21T15:28:14Z" description="Phrase Search" finished-at="2018-02-21T15:28:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- definePhrase -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.BingTest@108b2d7]" name="closeBrowser" is-config="true" duration-ms="98" started-at="2018-02-21T15:28:15Z" finished-at="2018-02-21T15:28:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.BingTest@108b2d7]" name="initializeTestBaseSetup" is-config="true" duration-ms="6579" started-at="2018-02-21T15:28:36Z" finished-at="2018-02-21T15:28:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="seearchImages()[pri:2, instance:scenarios.test.BingTest@108b2d7]" name="seearchImages" duration-ms="4325" started-at="2018-02-21T15:28:42Z" description="Images Search" finished-at="2018-02-21T15:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seearchImages -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.BingTest@108b2d7]" name="closeBrowser" is-config="true" duration-ms="132" started-at="2018-02-21T15:28:47Z" finished-at="2018-02-21T15:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- scenarios.test.BingTest -->
+      <class name="scenarios.test.GoogleTest">
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.GoogleTest@154909b]" name="initializeTestBaseSetup" is-config="true" duration-ms="8002" started-at="2018-02-21T15:28:15Z" finished-at="2018-02-21T15:28:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="definePhrase()[pri:1, instance:scenarios.test.GoogleTest@154909b]" name="definePhrase" duration-ms="1220" started-at="2018-02-21T15:28:23Z" description="Phrase Search" finished-at="2018-02-21T15:28:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- definePhrase -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.GoogleTest@154909b]" name="closeBrowser" is-config="true" duration-ms="123" started-at="2018-02-21T15:28:24Z" finished-at="2018-02-21T15:28:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.GoogleTest@154909b]" name="initializeTestBaseSetup" is-config="true" duration-ms="8534" started-at="2018-02-21T15:28:25Z" finished-at="2018-02-21T15:28:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="googleSearch()[pri:1, instance:scenarios.test.GoogleTest@154909b]" name="googleSearch" duration-ms="2445" started-at="2018-02-21T15:28:33Z" description="Basic Search" finished-at="2018-02-21T15:28:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleSearch -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.GoogleTest@154909b]" name="closeBrowser" is-config="true" duration-ms="123" started-at="2018-02-21T15:28:36Z" finished-at="2018-02-21T15:28:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeTestBaseSetup()[pri:0, instance:scenarios.test.GoogleTest@154909b]" name="initializeTestBaseSetup" is-config="true" duration-ms="8097" started-at="2018-02-21T15:28:47Z" finished-at="2018-02-21T15:28:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="FAIL" signature="seearchImages()[pri:2, instance:scenarios.test.GoogleTest@154909b]" name="seearchImages" duration-ms="4310" started-at="2018-02-21T15:28:55Z" description="Images Search" finished-at="2018-02-21T15:28:59Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerExceptionat java.io.FileOutputStream.<init>(Unknown Source)at java.io.FileOutputStream.<init>(Unknown Source)at searches.GoogleSearch.saveImage(GoogleSearch.java:115)at searches.GoogleSearch.searchImagesFor(GoogleSearch.java:102)at scenarios.test.GoogleTest.seearchImages(GoogleTest.java:47)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seearchImages -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scenarios.test.GoogleTest@154909b]" name="closeBrowser" is-config="true" duration-ms="157" started-at="2018-02-21T15:28:59Z" finished-at="2018-02-21T15:28:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- scenarios.test.GoogleTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

@@ -18,7 +18,12 @@ import implementation.search.Search;
 
 public class GoogleSearch implements Search{
 	
-public WebDriver driver;
+	public WebDriver driver;
+	
+	public GoogleSearch(WebDriver gdriver)
+	{
+		this.driver = gdriver;
+	}
 	
 	@FindBy(css="input[name='q']")
 	WebElement googleSearchBox;

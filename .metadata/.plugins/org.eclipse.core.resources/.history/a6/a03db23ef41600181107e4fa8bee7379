@@ -1,0 +1,18 @@
+package scenarios;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+import utilities.Utils;
+
+
+public class googleSearch {
+
+	public WebDriver driver;
+	Utils ut = new Utils();
+		
+	@BeforeMethod()
+	public void initializeTestBaseSetup()
+	{
+		driver = ut.setDriver(ut.getProperty("BrowserType"), ut.getProperty("appURL"));
+	}
+}

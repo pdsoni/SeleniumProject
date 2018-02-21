@@ -15,6 +15,11 @@ public class BingSearch implements Search{
 	
 	public WebDriver driver;
 	
+	public BingSearch(WebDriver bdriver)
+	{
+		this.driver = bdriver;
+	}
+	
 	@FindBy(css="input[name='q']")
 	WebElement bingSearchBox;
 	
